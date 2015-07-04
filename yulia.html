@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yulia.js</title>
+    <link rel="stylesheet" type="text/css" href="./fonts/armata-fontfacekit/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="./fonts/allura-fontfacekit/stylesheet.css" />
+    <style type="text/css">
+      body{overflow-x: hidden;}
+      .hidden{display:none;}
+      .menu-button{
+        color: #FFF !important;
+        background-color: #CCC;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding:10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        display:inline-block;
+      }
+
+      #namesake{
+        font-family: alluraregular, Tahoma, Helvetica, Arial, sans-serif;
+        font-size:45px;
+        padding-left:20px;
+      }
+
+      .title
+      {
+        font-family: ArmataRegular, Tahoma, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        color: #ccc;
+        display:inline-block;
+      }
+
+      #menu{
+        position: absolute;
+        width: 20%;
+        top:20px;
+        left:0px;
+      }
+
+      #code{
+        position: absolute;
+        width:70%;
+        top:20px;
+        left:30%;
+        padding:20px;
+      }
+
+      ul{
+        list-style-type: none;
+      }
+
+      li{
+        font-family: ArmataRegular, Tahoma, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+      }
+
+      a,
+      a:visited {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      a:hover{
+        color: red;
+      }
+      
+      .page{
+        padding-left: 20px;        
+        float:left;
+      }
+
+      pre{
+        font-family: courier, sans-serif;
+        font-size: 12px;
+        padding-left:10px;
+        border-left: 1px dotted #ccc;
+      }
+
+
+      #download-link{
+        position:absolute;
+        top:10px;
+        left:10px;
+        text-align: left;
+      }
+
+      #download-link a,
+      #download-link a:hover,
+      #download-link a:visited
+      {
+
+      }
+    </style>
+  </head>
+  <body>    
+    <div id="menu">
+      <ul>
+        <li>
+          <a class="menu-button" href="#menu-demo">Menu Demo</a>
+          <ul>
+            <li>
+              <a href="#levelA">Level A</a>
+              <ul>
+                <li>
+                  <a href="#levelA-1">Level A-1</a>
+                  <ul>
+                    <li>
+                      <a href="#levelA-2">Level A-2</a><br/>
+                      <ul>
+                        <li>
+                          <a href="#levelA-3-1">Level A-3</a><br/>
+                          <a href="#levelA-3-2">Level A-3</a><br/>
+                          <a href="#levelA-3-3">Level A-3</a><br/>
+                        </li>
+                      </ul>    
+                    </li>
+                    <li>
+                      <a href="#levelA-2a">Level A-2</a><br/>
+                      <ul>
+                        <li>
+                          <a href="#levelA-3-1a">Level A-3</a><br/>
+                          <a href="#levelA-3-2a">Level A-3</a><br/>
+                          <a href="#levelA-3-3a">Level A-3</a><br/>
+                        </li>
+                      </ul>    
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#levelB">Level B</a>
+              <ul>
+                <li>
+                  <a href="#levelB-1">Level B-1</a>
+                  <ul>
+                    <li>
+                      <a href="#levelB-2">Level B-2</a><br/>
+                      <ul>
+                        <li>
+                          <a href="#levelB-3-1">Level B-3</a><br/>
+                          <a href="#levelB-3-2">Level B-3</a><br/>
+                          <a href="#levelB-3-3">Level B-3</a><br/>
+                        </li>
+                      </ul>    
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#levelB-1b">Level B-1</a>
+                  <ul>
+                    <li>
+                      <a href="#levelB-2b">Level B-2</a><br/>
+                      <ul>
+                        <li>
+                          <a href="#levelB-3-1b">Level B-3</a><br/>
+                          <a href="#levelB-3-2b">Level B-3</a><br/>
+                          <a href="#levelB-3-3b">Level B-3</a><br/>
+                        </li>
+                      </ul>    
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#levelC">Level C</a>
+              <ul>
+                <li>
+                  <a href="#levelC-1">Level C-1</a>
+                  <ul>
+                    <li>
+                      <a href="#levelC-2">Level C-2</a><Cr/>
+                      <ul>
+                        <li>
+                          <a href="#levelC-3-1">Level C-3</a><Cr/>
+                          <a href="#levelC-3-2">Level C-3</a><Cr/>
+                          <a href="#levelC-3-3">Level C-3</a><Cr/>
+                        </li>
+                      </ul>    
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#levelC-1C">Level C-1</a>
+                  <ul>
+                    <li>
+                      <a href="#levelC-2C">Level C-2</a><Cr/>
+                      <ul>
+                        <li>
+                          <a href="#levelC-3-1c">Level C-3</a><Cr/>
+                          <a href="#levelC-3-2c">Level C-3</a><Cr/>
+                          <a href="#levelC-3-3c">Level C-3</a><Cr/>
+                        </li>
+                      </ul>    
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="menu-button" href="./js/yulia.js">download</a>
+        </li>
+        <li>
+          <a class="menu-button" href="./">back</a>
+        </li>
+      </ul>
+    </div><!-- end menu -->
+
+    <div id="code">
+
+      <div>
+        <span id="namesake">Yulia.js</span>
+        <br/>
+        <br/>
+      </div>
+      <div class="page">
+        <span class="title">//yulia.js (uncompressed: 2.6Kb)</span>
+        <br/>
+        <br/>
+        <pre>
+/* Please Note jQuery 1.8.3 >= is required */
+
+function yulia(id)
+{
+    var menu, bb, ul;                 //declare container variables
+    menu = jQuery(id);              //main menu container
+    bb = menu.find("ul");           //the top ul forms the visible backbone of the menu
+    ul = bb.find("ul");                 //find all nested ul's inside the backbone ul
+    ul.addClass("hidden");         //hide the ul's nested inside the backbone ul
+    bb.find("a").on("click", function (event){
+        //find all the links in the menu and add an "onclick" event 
+        var that, parent, contents;
+        that = $(event.target);       //get and "objectify" the calling elem
+        parent = that.parent();       //get a reference to the callers parent, a li elem, 
+        contents = parent.has("ul");  //if the parent has a child ul elem --&gt;
+        if(contents.length &gt; 0)       //which determines if this is an end node in the menu map or not...
+        {
+            //if the link clicked has a sibling ul elem, it is not an end node...
+            event.preventDefault();     //prevent the hyper link from activating
+            //toggle the visibility of the child ul element (sibling to the clicked link)
+            if(parent.children("ul").hasClass("hidden"))
+                parent.children("ul").removeClass("hidden");
+            else
+                parent.children("ul").addClass("hidden");
+        }
+        //else do nothing, do not prevent default behavior
+    });//end onclick binding
+}
+        </pre>
+      </div><!-- end page 1-->
+      <div class="page">
+        <span class="title">//menu-demo.html</span>
+        <br/>
+        <br/>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Yulia.js Demo&lt;/title&gt;
+        &lt;style type="text/css&gt;
+            .hidden{
+                display:hidden;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Required Menu Structure: &lt;ul&gt; -&gt; &lt;li&gt; -&gt; &lt;a&gt; --&gt;
+        &lt;div id="menu" &gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a href="#menu"&gt;Menu&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href="#A"&gt;Level 1&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;
+                                    &lt;a href="#A-1"&gt;Level 2&lt;/a&gt;
+                                    &lt;a href="#A-2"&gt;Level 2&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;                  
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#B"&gt;Level 1&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;
+                                    &lt;a href="#B-1"&gt;Level 2&lt;/a&gt;
+                                    &lt;a href="#B-2"&gt;Level 2&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;                  
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;script type="text/javascript" src="./jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="./yulia.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+          yulia("#menu");
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+      </div><!-- end page 2 -->
+    </div><!-- end code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/yulia.js"></script>
+    <script type="text/javascript">
+      yulia("#menu");
+    </script>
+  </body>
+</html>
