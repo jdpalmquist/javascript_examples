@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+    <title>Javascript Examples</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="./fonts/exotica-fontfacekit/stylesheet.css"  charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./fonts/fff-tusj-fontfacekit/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="./fonts/aierbazzi-fontfacekit/stylesheet.css"  charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./fonts/bagarozz-fontfacekit/stylesheet.css"  charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/moarff.css"  charset="utf-8" />
+    <style type="text/css">
+
+      body
+      {
+        margin: 0px;
+        padding: 0px;
+        /*background: url("../img/grey_radial_gradient.jpg") no-repeat center center fixed; */
+        background-color: #ccc;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow:hidden;
+      }
+
+
+      .message
+      {
+        position:absolute;
+        margin:0px;
+        padding:0px;
+        padding-top:10px;
+        padding-left:10px;
+        bottom:50px;
+        right:10px;
+        width:400px;
+        height:50px;
+        background-color: transparent;
+        color:blue;
+        font-size:30px;
+        text-align:center;
+        z-index:15;
+      }
+
+      #ref
+      {
+        width:100%;
+        position:fixed;
+        top:0px;
+        left:0px;
+        right:0px;
+        margin:0px;
+        margin-top:20px;
+        padding:0px;
+        padding-left:50px;
+        z-index:20;
+      }
+      #back
+      {
+        position:absolute;
+        top:30px;
+        left:30px;
+        font-family: "exoticaMedium";
+        font-size:30px;
+      }
+      #name
+      {
+        display:inline-block;
+        font-family: "exoticaMedium";
+        font-size:90px;
+      }
+
+      .submenu{
+        list-style-type:none; 
+        margin:0px;
+        padding:0px;
+        margin-left:50px;
+      }
+      .submenu li{
+        margin:0px;
+        padding:0px;
+      }
+      .submenu li a,
+      .submenu li a:visited{
+        font-size: 1.5em;
+        color: #333;
+        text-decoration:none;
+      }
+      .submenu li a:hover{
+        color: #777;
+      }
+
+
+      .foliage
+      {
+        font-family: "AierbazziRegular", "ArmataRegular", sans-serif;
+      }
+
+      .monster
+      {
+        font-family: "BagarozzRegular", "ArmataRegular", sans-serif;
+        z-index:2;
+        text-align:left;
+        vertical-align: bottom;
+        background:transparent;
+        /*
+        From the Original Bagarozz Demo:
+        ================================
+        font: 150px/200px 'BagarozzRegular'; <-- however this means the font size is fixed
+        letter-spacing: 0;
+        */
+      }
+      .shadow
+      {
+        text-shadow: 5px 10px 12px #000;
+      }
+      
+    </style>
+  </head>
+  <body> 
+    
+    <div id="ref">
+      <div id="name">
+        <a class="no_dek" href="./">
+          <span id="first-half"></span><span id="second-half"></span>
+        </a>
+      </div> 
+      <ul class="submenu">
+        <li>
+          <a href="slideshow.html">Custom Slideshow</a>
+        </li>
+        <li>
+          <a href="butterflies_static.html">Infinite Butterflies</a>
+        </li>
+        <li>
+          <a href="butterflies_dynamic.html">Swirling Butterflies</a>
+        </li>
+        <li>
+          <a href="jackson_pollock.html">Jackson Pollock Emulator</a>
+        </li>
+        <li>
+          <a href="yulia.html">Yulia.js Simple Collapsible Menu</a>
+        </li>
+      </ul>     
+    </div>
+    
+    <div class="message">
+      <span class="monster" title="Browser Font Check: Bagarozz">
+        If you can read this that means your browser does not support the Bagarozz font
+      </span>
+      <br/>
+      <span class="foliage" title="Browser Font Check: Aierbazzi">
+        If you can read this that means your browser does not support the Aierbazzi font
+      </span>
+    </div>
+
+    
+    <!-- Text Monsters :) -->
+    <div id="monsta0" class="monster shadow fontsize150"></div>
+    <div id="monsta1" class="monster shadow fontsize150"></div>
+    <div id="monsta2" class="monster shadow fontsize150"></div>
+    <div id="monsta3" class="monster shadow fontsize150"></div>
+    <div id="monsta4" class="monster shadow fontsize150"></div>
+    <div id="monsta5" class="monster shadow fontsize150"></div>
+    <div id="monsta6" class="monster shadow fontsize150"></div>
+    <div id="monsta7" class="monster shadow fontsize150"></div>
+    <div id="monsta8" class="monster shadow fontsize150"></div>
+    <div id="monsta9" class="monster shadow fontsize150"></div>
+    <div id="monsta10" class="monster shadow fontsize150"></div>
+    <div id="monsta11" class="monster shadow fontsize150"></div>
+    <div id="monsta12" class="monster shadow fontsize150"></div>
+    <div id="monsta13" class="monster shadow fontsize150"></div>
+    <div id="monsta14" class="monster shadow fontsize150"></div>
+    <div id="monsta15" class="monster shadow fontsize150"></div>
+    <div id="monsta16" class="monster shadow fontsize150"></div>
+    <div id="monsta17" class="monster shadow fontsize150"></div>
+    <div id="monsta18" class="monster shadow fontsize150"></div>
+    <div id="monsta19" class="monster shadow fontsize150"></div>
+    <div id="monsta20" class="monster shadow fontsize150"></div>
+    <div id="monsta21" class="monster shadow fontsize150"></div>
+    <div id="monsta22" class="monster shadow fontsize150"></div>
+    <div id="monsta23" class="monster shadow fontsize150"></div>
+    <div id="monsta24" class="monster shadow fontsize150"></div>
+    
+    
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/moarff.js"></script>
+    <script type="text/javascript">
+      moarff_color("JS Examples", "0000FF", "FF0000", "first-half");
+      
+      for(var i = 0; i < 25; i++)
+      {
+        animate_monster(i);        
+      }
+
+    </script>
+  </body>
+</html>

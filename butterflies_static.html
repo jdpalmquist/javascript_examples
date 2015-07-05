@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Butterflies</title>
+    <link rel="stylesheet" type="text/css" href="fonts/butterflies/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/aquiline2-fontfacekit/stylesheet.css" />
+    <style type="text/css">
+      body
+      {
+        margin: 0px;
+        padding: 0px;
+        background-color: white;
+        font-family:"ArmataRegular", "sans serif";
+        overflow:hidden;
+        padding-top:70px;
+      }
+      #ref
+      {
+        width:100%;
+        position:fixed;
+        top:0px;
+        left:0px;
+        right:0px;
+        padding-top:20px;
+        padding-left:50px;
+        z-index:20;
+        font-size:50px;
+      }
+      
+      #name
+      {
+        display:inline-block;
+        font-family: "aquilinetworegular", Tahoma, Helvetica, Arial, sans-serif;
+      }
+      
+      .no_dek{text-decoration:none;}
+    </style>
+  </head>
+  <body>
+    <div id="ref">
+      <div >
+        <a id="name" class="no_dek" href="index.html">
+          <span id="title1"></span><span id="title2"></span>
+        </a>
+      </div>
+    </div>
+    <div id="bf_container"></div>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/butterfly1.js"></script>
+    <script type="text/javascript" src="js/moarff.js"></script>
+    <script type="text/javascript">
+      moarff_color("Butte", "0000FF", "FF0000", "title1");
+      moarff_color("rflies", "FF0000", "0000FF", "title2"); 
+    </script>
+  </body>
+</html>
