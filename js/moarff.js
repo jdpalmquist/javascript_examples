@@ -525,12 +525,12 @@ function animate_monster(i)
   m.addClass("position_absolute");
   m.css("width", "180px");
   m.css("height", "180px");
-  m.css("left", "100%");
-  var randomBottomS = Math.ceil(Math.random()*100) % 50;
+  m.css("left", "100%"); // horizontal starting position
+  var randomBottomS = Math.ceil(Math.random()*100) % 50; //vertical starting position
   m.css("bottom", randomBottomS+"%");
   
-  var randomBottomF = "-" + Math.ceil(Math.random()*100) % 20 + "%";
-  var randomLeft = "-" + (Math.ceil(Math.random()*100) % 20) + "%";
+  var randomBottomF = "-" + Math.ceil(Math.random()*1000) % 200 + "%";
+  var randomLeft = "-" + (Math.ceil(Math.random()*1000) % 200) + "%";
 
   m.animate(
     {
@@ -539,9 +539,7 @@ function animate_monster(i)
     },
     {
       duration: ((Math.ceil(Math.random()*100000) % 15000) + 7000 ),
-      step: function(){
-
-      },
+      step: function(){},
       done: function(){
       	this.index = i;
       	var m = jQuery('#monsta'+this.index);
