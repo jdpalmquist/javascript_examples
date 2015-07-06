@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Math is Fun!</title>
+		<link rel="stylesheet" type="text/css" href="../fonts/eraser-fontfacekit/stylesheet.css" />
+		<link rel="stylesheet" type="text/css" href="../fonts/fff-tusj-fontfacekit/stylesheet.css" />
+		<link rel="stylesheet" type="text/css" href="../css/factor_trinomial.css" />
+		<style type="text/css">
+			#hintcontainer{position:absolute; bottom:10px;left:30px;}
+			#hintnode{cursor:pointer;}
+		</style>
+	</head>
+	<body>
+		<div class="title">Factoring Trinomials Tutorial</div>	
+		<div id="equation">
+			<!-- User Input Here -->
+			<input id="A" class="eq_input" type="text" value="A" onfocus="clearinput(1)" onblur="restoreinput(1)" />x<span class="large_super">2</span>&nbsp;+&nbsp;<input id="B" class="eq_input" type="text" value="B" onfocus="clearinput(2)" onblur="restoreinput(2)" />x&nbsp;+&nbsp;<input id="C" class="eq_input" type="text" value="C" onfocus="clearinput(3)" onblur="restoreinput(3)" />&nbsp;=&nbsp;0
+			<!-- End User Input -->
+		</div>
+		<div id="chalkboard">
+			&nbsp;
+		</div>
+		<div class="reset"><a href="index.html">&#10031;&nbsp;&nbsp;Start Over</a></div>
+		<div id="hintcontainer">
+			<span id="hintnode" onclick="showhint()">&#10031;&nbsp;&nbsp;Usage Hint</span>
+			<div id="hint" class="display_hidden">
+				To Enter your equation:<br/>
+				- click on A, B or C to set that value<br/>
+				- or use the TAB key to set a value<br/>
+				- Click &ldquo;Start Over&rdquo; to start over<br/>
+				- Click &ldquo;Next&rdquo; to advance to the next step<br/>
+				- Enter Negative Numbers like this: -4<br/><br/>
+			</div>
+		</div>
+		<div id="next" class="next" onclick="goto_step1()">&#10031;&nbsp;&nbsp;Next</div>
+		<div id="answer" onclick="give_answer()">&#10031;&nbsp;&nbsp;Just Give me the Answer</div>
+		<script type="text/javascript" src="../js/factor_trinomial.js"></script>
+		<script type="text/javascript" src="../js/trinomial_io.js"></script>
+		<script type="text/javascript">
+			
+			//Global Variable Declarations
+			var a,b,b1,b2,c,A,B,C,factorsA,factorsC,working,final_forms,solution;
+
+			function clearinput(x)
+			{
+				switch(x)
+				{
+					case 1:
+					case "1":
+						var node = document.getElementById("A");
+						if(node.value == "A")
+							node.value = "";
+						break;
+					case 2:
+					case "2":
+						var node = document.getElementById("B");
+						if(node.value == "B")
+							node.value = "";
+						break;
+					case 3:
+					case "3":
+						var node = document.getElementById("C");
+						if(node.value == "C")
+							node.value = "";
+						break;
+					default:break;
+				}
+			}
+
+			function restoreinput(x)
+			{
+				switch(x)
+				{
+					case 1:
+					case "1":
+						var node = document.getElementById("A");
+						if(node.value == "")
+							node.value = "A";
+						break;
+					case 2:
+					case "2":
+						var node = document.getElementById("B");
+						if(node.value == "")
+							node.value = "B";
+						break;
+					case 3:
+					case "3":
+						var node = document.getElementById("C");
+						if(node.value == "")
+							node.value = "C";
+						break;
+					default:break;
+				}
+			}
+
+			var hintstatus = false;
+			function showhint()
+			{
+				//add or remove the "display_hidden" css class from the hint to hide/show the message
+				var node = document.getElementById("hint");
+				if(node != null && node != typeof 'undefined')
+				{
+					if(hintstatus == false)
+					{
+						//remove the display_hidden class
+						node.className = node.className.replace( /(?:^|\s)display_hidden(?!\S)/g , '' );
+						hintstatus = true;
+					}
+					else
+					{
+						//add the display_hidden class
+						node.className += "display_hidden";
+						hintstatus = false;
+					}
+				}
+			}
+
+			function goto_step1()
+			{
+				var d,e,f;
+				//harvest the input from the calculator form
+				d = document.getElementById("A").value.replace(" ", "");
+				e = document.getElementById("B").value.replace(" ", "");
+				f = document.getElementById("C").value.replace(" ", "");
+				if(d != "" && d != "A" && e != "" && e != "B" && f != "" && f != "C")
+					window.location = "step1.html?a="+d+"&b="+e+"&c="+f;
+				else
+					alert("You must enter values for the equation in order to proceed!");
+			}
+
+			function give_answer()
+			{				
+				//harvest the input from the calculator form
+				d = document.getElementById("A").value.replace(" ", "");
+				e = document.getElementById("B").value.replace(" ", "");
+				f = document.getElementById("C").value.replace(" ", "");
+
+				if(d != "" &&  d != "A" && e != "" && e != "B" && f != "" && f != "C")
+				{
+					a = parseInt(d);
+					b = parseInt(e);
+					c = parseInt(f);
+					factor_trinomial();
+					print_solution();
+				}
+				else
+				{
+					alert("You must enter values for the equation in order to proceed!");
+				}
+			}
+
+		</script>
+	</body>
+</html>

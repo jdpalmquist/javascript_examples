@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Math is Fun!</title>
+		<link rel="stylesheet" type="text/css" href="../fonts/eraser-fontfacekit/stylesheet.css" />
+		<link rel="stylesheet" type="text/css" href="../fonts/fff-tusj-fontfacekit/stylesheet.css" />
+		<link rel="stylesheet" type="text/css" href="../css/factor_trinomial.css" />
+	</head>
+	<body>
+		<input id="A" type="hidden" value="" />
+		<input id="B" type="hidden" value="" />
+		<input id="C" type="hidden" value="" />
+		<input id="a" type="hidden" value="" />
+		<input id="b" type="hidden" value="" />
+		<input id="c" type="hidden" value="" />
+		<div class="title">Factoring Trinomials Tutorial</div>
+		<div id="chalkboard">
+			&nbsp;
+		</div>
+		<div id="reset" class="reset"><a href="index.html">&#10031;&nbsp;&nbsp;Start Over</a></div>
+		<script type="text/javascript" src="../js/trinomial_io.js"></script>
+		<script type="text/javascript" src="../js/factor_trinomial.js"></script>
+		<script type="text/javascript">
+			//Global Variable Declarations
+			var a,b,b1,b2,c,A,B,C,factorsA,factorsC,working,final_forms,solution;
+			
+			//parse URI
+			parseURI();
+
+			//factor the trinomial
+			factor_trinomial();
+
+			//print step 4
+			print_step4();
+
+		</script>
+	</body>
+</html>
